@@ -13,14 +13,20 @@
 
     const valor = Number(prompt("Informe o valor do imovel:"));
     const anos = Number(prompt("Em quantos anos será feito o financiamento?"));
-    const salario = Number(prompt("QUal o salario do comprador?"));
+    const salario = Number(prompt("Qual o salario do comprador?"));
 
     //PROCESSAMENTO
 
+    let financiamento;
     let prestacao = valor / (anos * 12);
-    if ()
-
+    if (prestacao < (salario * 0.3)){
+        financiamento = "foi aceito";
+    } else {
+        financiamento = "foi negado";
+    }
     
     //SAÍDA
+
+    document.write(`Seu financiamento ${financiamento}, e o valor da parcela ficaria ${prestacao.toFixed(2).replace(".",",")}.`);
 
 </script>
